@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro');
+
+:root{
+    --main-font: 'Source Sans Pro', sans-serif;
+    --second-font: 'Oswald', sans-serif;
+    --red: #FE6462;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+    ), url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+* , html {
+    font-family: var(--main-font);
+    outline: none;
+}
+
+.container{
+    width: 800px;
+    margin: 50px auto;
+}
+
+h1{
+    font-family: var(--second-font);
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+.logo{
+    display: block;
+    text-align: left;
+    color: var(--red);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+form input[type="email"],
+form input[type="submit"]{
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"]{
+    background-color: var(--red);
+    color: #fff;
+}
+
+.small{
+    font-size: 12px;
+}
+
+.hashtag,
+.intro{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media(max-width: 800px){
+    .container{
+        width: 100%;
+        padding: 0 50px;
+    }
+}
