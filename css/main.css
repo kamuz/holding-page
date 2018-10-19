@@ -13,25 +13,36 @@ html, body{
     height: 100%;
 }
 
-body{
-    display: flex;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.6), 
-        rgba(0, 0, 0, 0.6)
-    ), url(../img/bg.jpg) no-repeat;
-    background-size: cover;
-    text-align: center;
-    color: #fff;
-}
-
 * , html {
     font-family: var(--main-font);
     outline: none;
 }
 
+#bg{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+    ), url(../img/bg.jpg) center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
 .container{
     width: 800px;
-    margin: 50px auto;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
 }
 
 h1{
@@ -40,6 +51,11 @@ h1{
     text-transform: uppercase;
     color: #fff;
 
+}
+
+header{
+    position: absolute;
+    top: 50px;
 }
 
 .logo{
@@ -75,8 +91,19 @@ form input[type="submit"]{
 }
 
 @media(max-width: 800px){
+
     .container{
-        width: 100%;
-        padding: 0 50px;
+        width: 90%;
     }
+
+    #bg{
+        height: auto;
+        min-height: 100%;
+    }
+
+    header{
+        padding-top: 30px;
+        position: static;
+    }
+
 }
